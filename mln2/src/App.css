@@ -1,0 +1,28 @@
+/* Extra bespoke styles for cinematic touches that complement Tailwind utility classes */
+
+.rail-noise {
+  position: relative;
+  isolation: isolate;
+}
+
+.rail-noise::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background-image: radial-gradient(circle at 0 0, rgba(248, 250, 252, 0.06), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(15, 23, 42, 0.8), transparent 55%);
+  mix-blend-mode: soft-light;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.train-smoke {
+  filter: blur(6px);
+  opacity: 0.65;
+}
+
+.section-shadow {
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.7);
+}
+
