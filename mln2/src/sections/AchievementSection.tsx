@@ -5,58 +5,61 @@ export function AchievementSection() {
   return (
     <section
       id="thanh-tuu"
-      className="section-shadow relative overflow-hidden rounded-3xl border border-emerald-400/40 bg-gradient-to-b from-slate-950 via-emerald-950/95 to-slate-950 px-6 py-12 md:px-12 md:py-16"
+      className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-[#011b33] via-[#022424] to-brand-dark px-6 py-16 md:px-16 md:py-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0_0,#22c55e33,transparent_55%),radial-gradient(circle_at_100%_100%,#38bdf824,transparent_60%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0_0,#10b98122,transparent_60%),radial-gradient(circle_at_100%_100%,#38bdf81a,transparent_65%)] mix-blend-screen" />
 
-      <RevealOnScroll className="relative z-10 max-w-3xl space-y-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-300/80">
+      <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#10b981]">
           Thành tựu sau Đổi Mới
         </p>
-        <h2 className="text-balance text-2xl font-semibold tracking-tight text-emerald-50 md:text-3xl lg:text-4xl">
+        <h2 className="font-display text-balance text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
           Kết quả của sự chuyển đổi
         </h2>
-        <p className="max-w-2xl text-sm leading-relaxed text-emerald-100/90 md:text-[15px]">
+        <p className="max-w-2xl text-base leading-relaxed text-emerald-100/80 md:text-lg">
           Hơn ba thập kỷ Đổi Mới đã làm thay đổi căn bản diện mạo kinh tế – xã hội Việt Nam, nâng
-          cao đời sống của hàng triệu người dân.
+          cao đời sống của hàng triệu người dân và củng cố vị thế quốc gia trên trường quốc tế.
         </p>
       </RevealOnScroll>
 
-      <RevealOnScroll delay={0.12} className="relative z-10 mt-8 grid gap-6 md:grid-cols-3">
-        <div className="flex flex-col justify-between rounded-2xl border border-emerald-400/50 bg-slate-950/80 px-4 py-5 text-center shadow-soft-xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-300/90">
+      <RevealOnScroll delay={0.12} className="relative z-10 mt-12 grid gap-8 md:grid-cols-3">
+        <div className="glass-card flex flex-col justify-between rounded-[2rem] p-8 text-center transition-transform hover:-translate-y-2">
+          <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#10b981]">
             {achievements.gdpGrowthLabel}
           </p>
-          <p className="mt-4 text-3xl font-semibold tracking-tight text-emerald-100">
+          <p className="mt-6 mb-4 font-display text-5xl font-bold tracking-tight text-white drop-shadow-md">
             {achievements.gdpGrowthValue}
           </p>
-          <p className="mt-2 text-[11px] text-emerald-100/80">
-            Việt Nam nằm trong nhóm các nước có tốc độ tăng trưởng cao trong khu vực.
+          <div className="mx-auto mb-4 h-px w-12 bg-emerald-500/30" />
+          <p className="text-sm leading-relaxed text-emerald-100/70">
+            Việt Nam nằm trong nhóm các nước có tốc độ tăng trưởng cao và ổn định nhất khu vực.
           </p>
         </div>
 
-        <div className="flex flex-col justify-between rounded-2xl border border-emerald-400/50 bg-slate-950/80 px-4 py-5 text-center shadow-soft-xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-300/90">
+        <div className="glass-card flex flex-col justify-between rounded-[2rem] p-8 text-center transition-transform hover:-translate-y-2">
+          <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#10b981]">
             {achievements.povertyReductionLabel}
           </p>
-          <p className="mt-4 text-3xl font-semibold tracking-tight text-emerald-100">
+          <p className="mt-6 mb-4 font-display text-5xl font-bold tracking-tight text-white drop-shadow-md">
             {achievements.povertyReductionValue}
           </p>
-          <p className="mt-2 text-[11px] text-emerald-100/80">
-            Việt Nam được quốc tế ghi nhận là một trong những câu chuyện giảm nghèo thành công.
+          <div className="mx-auto mb-4 h-px w-12 bg-emerald-500/30" />
+          <p className="text-sm leading-relaxed text-emerald-100/70">
+            Được cộng đồng quốc tế ghi nhận là một trong những câu chuyện giảm nghèo ấn tượng nhất toàn cầu.
           </p>
         </div>
 
-        <div className="flex flex-col justify-between rounded-2xl border border-emerald-400/50 bg-slate-950/80 px-4 py-5 text-center shadow-soft-xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-300/90">
+        <div className="glass-card flex flex-col justify-between rounded-[2rem] p-8 text-center transition-transform hover:-translate-y-2">
+          <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#10b981]">
             {achievements.manufacturingLabel}
           </p>
-          <p className="mt-4 text-3xl font-semibold tracking-tight text-emerald-100">
+          <p className="mt-6 mb-4 font-display text-5xl font-bold tracking-tight text-white drop-shadow-md">
             {achievements.manufacturingValue}
           </p>
-          <p className="mt-2 text-[11px] text-emerald-100/80">
-            Nhiều tập đoàn lớn đặt nhà máy, trung tâm sản xuất tại Việt Nam, tạo việc làm và giá trị
-            xuất khẩu cao.
+          <div className="mx-auto mb-4 h-px w-12 bg-emerald-500/30" />
+          <p className="text-sm leading-relaxed text-emerald-100/70">
+            Nhiều tập đoàn công nghệ lớn đặt trung tâm sản xuất tại Việt Nam, nâng tỷ trọng xuất khẩu công nghệ cao.
           </p>
         </div>
       </RevealOnScroll>

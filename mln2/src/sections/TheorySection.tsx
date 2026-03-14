@@ -4,91 +4,78 @@ export function TheorySection() {
   return (
     <section
       id="ly-thuyet"
-      className="section-shadow relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 px-6 py-12 md:px-12 md:py-16"
+      className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#111] to-black px-6 py-16 md:px-16 md:py-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#fbbf2420,transparent_55%),radial-gradient(circle_at_90%_100%,#38bdf81f,transparent_60%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#facc1515,transparent_50%),radial-gradient(circle_at_90%_100%,#38bdf812,transparent_60%)] mix-blend-screen" />
 
-      <RevealOnScroll className="relative z-10 max-w-3xl space-y-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-300/80">
-          Tài liệu chính · Trích từ ghi chú MLN122
+      <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-gold">
+          Tài liệu chính · Tổng kết lý luận
         </p>
-        <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl lg:text-4xl">
-          Khung lý thuyết: Từ kinh tế kế hoạch hóa đến kinh tế thị trường định hướng XHCN
+        <h2 className="font-display text-balance text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          Khung lý thuyết cốt lõi
         </h2>
-        <p className="max-w-2xl text-sm leading-relaxed text-slate-200/90 md:text-[15px]">
-          Phần này tóm lược những nội dung cốt lõi trong README – cũng là “xương sống” lý luận cho
-          toàn bộ câu chuyện trên website.
+        <p className="max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
+          Tóm lược quá trình chuyển đổi từ hình thái kinh tế kế hoạch hóa sang nền kinh tế thị trường định hướng XHCN, điểm tựa lý luận cho toàn bộ lịch sử phát triển của dân tộc.
         </p>
       </RevealOnScroll>
 
-      <div className="relative z-10 mt-8 grid gap-6 lg:grid-cols-2">
-        <RevealOnScroll delay={0.05} className="space-y-4 text-sm text-slate-100/90">
-          <div className="rounded-2xl border border-slate-600/70 bg-slate-950/85 px-4 py-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              1. Bối cảnh trước Đổi Mới
+      <div className="relative z-10 mt-12 grid gap-8 lg:grid-cols-2">
+        <RevealOnScroll delay={0.05} className="space-y-6">
+          <div className="glass-card rounded-[1.5rem] p-6 transition-all hover:bg-white/5 hover:-translate-y-1">
+            <p className="font-display text-lg font-bold text-brand-gold">
+              01. Bối cảnh trước Đổi Mới
             </p>
-            <p className="mt-2 text-[13px] leading-relaxed">
-              Nền kinh tế kế hoạch hóa tập trung, bao cấp – Nhà nước quyết định hầu hết hoạt động
-              sản xuất, phân phối, giá cả; sở hữu chủ yếu là nhà nước và tập thể, phân phối bằng tem
-              phiếu, doanh nghiệp thiếu tự chủ, động lực cạnh tranh yếu dẫn tới khan hiếm hàng hóa.
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-300">
+              Nền kinh tế kế hoạch hóa tập trung bao cấp: Nhà nước quyết định tuyệt đối. Sở hữu toàn dân và tập thể. Phân phối dựa trên tem phiếu. Cơ chế thiếu phản ứng thị trường và động lực lợi ích, dẫn tới khủng hoảng kéo dài.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-600/70 bg-slate-950/85 px-4 py-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              2. Chuyển sang kinh tế thị trường định hướng XHCN
+          <div className="glass-card rounded-[1.5rem] p-6 transition-all hover:bg-white/5 hover:-translate-y-1">
+            <p className="font-display text-lg font-bold text-brand-gold">
+              02. Bước ngoặt 1986
             </p>
-            <p className="mt-2 text-[13px] leading-relaxed">
-              Sau Đổi Mới 1986, Việt Nam xây dựng mô hình kinh tế thị trường nhưng vẫn giữ vững mục
-              tiêu xã hội chủ nghĩa: vận hành theo quy luật cung – cầu, giá trị, cạnh tranh; Nhà
-              nước định hướng phát triển, đảm bảo công bằng xã hội và ổn định vĩ mô.
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-300">
+              Đại hội VI khởi xướng đường lối Đổi Mới. Khẳng định sự tồn tại khách quan của thị trường. Thay đổi tư duy kinh tế: từ bỏ hiện vật hóa sang phát triển kinh tế hàng hóa, mở cửa kinh tế với thế giới.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-600/70 bg-slate-950/85 px-4 py-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              3. Cải cách thể chế kinh tế
+          <div className="glass-card rounded-[1.5rem] p-6 transition-all hover:bg-white/5 hover:-translate-y-1">
+            <p className="font-display text-lg font-bold text-brand-gold">
+              03. Cải cách thể chế sâu rộng
             </p>
-            <p className="mt-2 text-[13px] leading-relaxed">
-              Từ cơ chế “mệnh lệnh – chỉ tiêu pháp lệnh” sang thừa nhận cơ chế thị trường, trao quyền
-              tự chủ cho doanh nghiệp và hình thành các loại thị trường (hàng hóa, vốn, lao động, bất
-              động sản); đồng thời ban hành các luật quan trọng như Luật Doanh nghiệp, Luật Đầu tư,
-              Luật Đất đai, Luật Cạnh tranh.
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-300">
+              Xóa bỏ cơ chế "xin - cho", pháp điển hóa các quy tắc thị trường qua hàng loạt đạo luật (Luật Doanh nghiệp, Luật Đầu tư). Trao quyền tự chủ thực sự cho mọi loại hình doanh nghiệp.
             </p>
           </div>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={0.12} className="space-y-4 text-sm text-slate-100/90">
-          <div className="rounded-2xl border border-slate-600/70 bg-slate-950/85 px-4 py-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              4. Nền kinh tế nhiều thành phần
+        <RevealOnScroll delay={0.12} className="space-y-6">
+          <div className="glass-card rounded-[1.5rem] p-6 transition-all hover:bg-white/5 hover:-translate-y-1">
+            <p className="font-display text-lg font-bold text-brand-gold">
+              04. Đa dạng hình thức sở hữu
             </p>
-            <p className="mt-2 text-[13px] leading-relaxed">
-              Từ chỗ chỉ có kinh tế nhà nước và kinh tế tập thể, sau Đổi Mới đã xuất hiện đầy đủ các
-              thành phần: kinh tế nhà nước, tập thể, tư nhân, hộ gia đình, kinh tế có vốn đầu tư nước
-              ngoài (FDI) – cùng tồn tại, hợp tác và cạnh tranh bình đẳng theo pháp luật.
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-300">
+              Xây dựng nền kinh tế nhiều thành phần: Kinh tế Nhà nước, Tập thể, Tư nhân, và FDI. Thừa nhận vai trò động lực to lớn của sở hữu tư nhân trong cạnh tranh, sáng tạo và giải quyết việc làm.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-600/70 bg-slate-950/85 px-4 py-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              5. Hài hòa các quan hệ lợi ích
+          <div className="glass-card rounded-[1.5rem] p-6 transition-all hover:bg-white/5 hover:-translate-y-1">
+            <p className="font-display text-lg font-bold text-brand-gold">
+              05. Hài hòa lợi ích & Công bằng
             </p>
-            <p className="mt-2 text-[13px] leading-relaxed">
-              Kết hợp chặt chẽ lợi ích Nhà nước (thu ngân sách, hạ tầng, ổn định vĩ mô), lợi ích
-              doanh nghiệp (tự do kinh doanh, lợi nhuận, mở rộng sản xuất) và lợi ích người lao động,
-              xã hội (thu nhập, việc làm, an sinh – lương tối thiểu, bảo hiểm xã hội, giảm nghèo).
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-300">
+              Coi giá trị con người là cốt lõi. Gắn kết sự thịnh vượng kinh tế với tiến bộ, công bằng xã hội (bảo vệ quyền lợi NLĐ, an sinh XH, bảo hiểm, nâng mức lương tối thiểu) thông qua điều tiết vĩ mô.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-600/70 bg-slate-950/85 px-4 py-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              6. Kết quả chuyển đổi
+          <div className="glass-card rounded-[1.5rem] p-6 transition-all hover:bg-white/5 hover:-translate-y-1">
+            <p className="font-display text-lg font-bold text-brand-gold">
+              06. Kỳ tích tăng trưởng
             </p>
-            <p className="mt-2 text-[13px] leading-relaxed">
-              Tốc độ tăng trưởng GDP cao trong nhiều thập kỷ, Việt Nam trở thành trung tâm sản xuất
-              và xuất khẩu lớn ở châu Á, hàng chục triệu người thoát nghèo, mức sống người dân được
-              cải thiện rõ rệt – khẳng định tính đúng đắn của đường lối Đổi Mới.
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-300">
+              Chuyển hóa từ một quốc gia thiếu ăn trở thành trung tâm cung ứng toàn cầu. Khối lượng GDP không ngừng tăng trưởng mạnh mẽ song hành cùng công cuộc giảm nghèo được quốc tế công nhận là kỳ tích.
             </p>
           </div>
         </RevealOnScroll>

@@ -21,15 +21,15 @@ const data = {
     {
       label: 'Cung thực tế',
       data: [40, 35, 30],
-      borderColor: '#fb7185',
-      backgroundColor: '#fb7185',
+      borderColor: '#e63946',
+      backgroundColor: '#e63946',
       tension: 0.35,
     },
     {
       label: 'Cầu xã hội',
       data: [75, 80, 85],
-      borderColor: '#38bdf8',
-      backgroundColor: '#38bdf8',
+      borderColor: '#4a90e2',
+      backgroundColor: '#4a90e2',
       tension: 0.35,
     },
   ],
@@ -45,8 +45,8 @@ const options = {
       },
     },
     tooltip: {
-      backgroundColor: '#020617',
-      borderColor: '#38bdf8',
+      backgroundColor: '#050505',
+      borderColor: '#4a90e2',
       borderWidth: 1,
       titleFont: { size: 11 },
       bodyFont: { size: 11 },
@@ -58,7 +58,7 @@ const options = {
         color: '#cbd5f5',
         font: { size: 11 },
       },
-      grid: { color: 'rgba(148,163,184,0.18)' },
+      grid: { color: 'rgba(255,255,255,0.05)' },
     },
     y: {
       beginAtZero: true,
@@ -68,7 +68,7 @@ const options = {
         font: { size: 10 },
         callback: (value: number | string) => `${value}%`,
       },
-      grid: { color: 'rgba(30,64,175,0.45)' },
+      grid: { color: 'rgba(255,255,255,0.05)' },
     },
   },
 }
@@ -77,68 +77,68 @@ export function CrisisSection() {
   return (
     <section
       id="khung-hoang"
-      className="section-shadow relative overflow-hidden rounded-3xl border border-rose-700/60 bg-gradient-to-b from-slate-950 via-slate-950 to-rose-950/90 px-6 py-12 md:px-12 md:py-16"
+      className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#1a0f12] to-[#261014] px-6 py-16 md:px-16 md:py-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#f9731622,transparent_55%),radial-gradient(circle_at_90%_100%,#0f172a66,transparent_55%)] mix-blend-soft-light" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#e6394622,transparent_50%),radial-gradient(circle_at_90%_100%,#facc1510,transparent_55%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
 
-      <RevealOnScroll className="relative z-10 max-w-3xl space-y-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-rose-300/80">
+      <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-red">
           Khủng hoảng kinh tế · MLN122
         </p>
-        <h2 className="text-balance text-2xl font-semibold tracking-tight text-rose-50 md:text-3xl lg:text-4xl">
-          Khi các quy luật kinh tế bị chối bỏ
+        <h2 className="font-display text-balance text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          Sụp đổ của các quy luật kinh tế
         </h2>
 
-        <p className="max-w-2xl text-sm leading-relaxed text-rose-100/90 md:text-[15px]">
-          Trong cơ chế kế hoạch hóa tập trung, nhiều quy luật kinh tế khách quan bị xem nhẹ hoặc phủ
-          nhận. Điều đó khiến nền kinh tế vận hành méo mó, để lại hậu quả nặng nề.
+        <p className="max-w-2xl text-base leading-relaxed text-rose-100/80 md:text-lg">
+          Trong cơ chế kế hoạch hóa tập trung, các quy luật kinh tế khách quan bị xem nhẹ hoặc phủ
+          nhận hoàn toàn. Điều đó khiến nền kinh tế tổn thương sâu sắc, kéo theo lạm phát phi mã.
         </p>
       </RevealOnScroll>
 
-      <div className="relative z-10 mt-8 grid gap-8 md:grid-cols-[minmax(0,1.4fr),minmax(0,1fr)] md:items-start">
+      <div className="relative z-10 mt-12 grid gap-8 md:grid-cols-[1.5fr_1fr] md:items-start md:gap-12">
         <RevealOnScroll delay={0.1} className="space-y-4">
-          <div className="rounded-2xl border border-rose-600/60 bg-slate-950/80 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose-200">
-              Infographic cung – cầu
+          <div className="glass-card rounded-2xl p-6 transition-colors hover:bg-white/5">
+            <p className="font-display text-lg font-semibold text-brand-red">
+              Infographic Cung – Cầu
             </p>
-            <p className="mt-1 text-[13px] leading-relaxed text-rose-100/90">
+            <p className="mt-2 text-sm leading-relaxed text-rose-100/70">
               Biểu đồ mô phỏng tình trạng{' '}
-              <span className="font-semibold text-rose-200">cung thấp – cầu cao</span> khiến khan
-              hiếm hàng hóa trở nên phổ biến trong nền kinh tế bao cấp.
+              <span className="font-bold text-white">cung thấp – cầu cao</span> khiến khan
+              hiếm hàng hóa trở nên trầm trọng trong nền kinh tế bao cấp.
             </p>
-            <div className="mt-4 h-52 w-full rounded-xl bg-slate-900/70 p-3">
+            <div className="mt-6 h-64 w-full rounded-xl bg-black/40 p-4 border border-white/5">
               <Line data={data} options={options} />
             </div>
           </div>
         </RevealOnScroll>
 
-        <RevealOnScroll delay={0.2} className="space-y-5">
-          <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose-200/90">
-              Ba quy luật bị phủ nhận
+        <RevealOnScroll delay={0.2} className="space-y-6">
+          <div className="space-y-4">
+            <p className="font-display text-lg font-semibold text-[#fde68a]">
+              Ba quy luật bị chối bỏ
             </p>
-            <div className="space-y-3 text-[13px] text-rose-50/90 md:text-sm">
+            <div className="space-y-3 text-sm">
               {crisisRules.map((rule) => (
                 <div
                   key={rule.title}
-                  className="rounded-xl border border-rose-600/40 bg-slate-950/80 px-3 py-2.5"
+                  className="rounded-xl border border-white/5 bg-black/40 px-4 py-3 transition-all hover:bg-white/5 hover:translate-x-1"
                 >
-                  <p className="font-semibold text-rose-100">{rule.title}</p>
-                  <p className="mt-1 text-xs text-rose-100/85">{rule.description}</p>
+                  <p className="font-bold text-white">{rule.title}</p>
+                  <p className="mt-1.5 text-xs text-rose-100/70 leading-relaxed">{rule.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="space-y-3 rounded-2xl border border-rose-700/70 bg-slate-950/85 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose-200/90">
-              Hậu quả kinh tế – xã hội
+          <div className="glass-card space-y-4 rounded-2xl p-6 border border-brand-red/20">
+            <p className="font-display text-lg font-semibold text-brand-red">
+              Hệ lụy trực tiếp
             </p>
-            <ul className="space-y-2 text-[13px] leading-relaxed text-rose-100/90 md:text-sm">
-              <li>• Sản xuất đình đốn, năng suất thấp.</li>
-              <li>• Khan hiếm hàng hóa, đời sống nhân dân vô cùng khó khăn.</li>
-              <li>• Lạm phát phi mã, tiền lương thực tế giảm mạnh.</li>
-              <li>• Niềm tin xã hội bị thử thách, nhu cầu đổi mới trở nên bức thiết.</li>
+            <ul className="space-y-3 text-[13px] sm:text-sm leading-relaxed text-rose-100/80">
+              <li className="flex items-start gap-2"><span className="text-brand-red">■</span> Sản xuất đình đốn, năng suất lao động cực kỳ thấp.</li>
+              <li className="flex items-start gap-2"><span className="text-brand-red">■</span> Khan hiếm hàng hóa, đời sống nhân dân vô cùng khó khăn.</li>
+              <li className="flex items-start gap-2"><span className="text-brand-red">■</span> Lạm phát phi mã, tiền lương thực tế mất giá thảm hại.</li>
             </ul>
           </div>
         </RevealOnScroll>

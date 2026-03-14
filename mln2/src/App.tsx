@@ -8,6 +8,7 @@ import { MarketEconomySection } from './sections/MarketEconomySection'
 import { AchievementSection } from './sections/AchievementSection'
 import { ConclusionSection } from './sections/ConclusionSection'
 import { TheorySection } from './sections/TheorySection'
+import { GallerySection } from './sections/GallerySection'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <MarketEconomySection />
       <AchievementSection />
       <TheorySection />
+      <GallerySection />
       <ConclusionSection />
     </Layout>
   )
