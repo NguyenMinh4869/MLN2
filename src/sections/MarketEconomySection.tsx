@@ -6,6 +6,8 @@ export function MarketEconomySection() {
       id="thi-truong"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#05111b] to-[#011b33] px-6 py-16 md:px-16 md:py-24"
     >
+      {/* Background Images */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/thitruong-bg.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_5%_0,#38bdf822,transparent_60%),radial-gradient(circle_at_100%_100%,#0ea5e915,transparent_65%)] mix-blend-screen" />
 

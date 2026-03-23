@@ -6,6 +6,8 @@ export function BaoCapSection() {
       id="bao-cap"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-[#1a1410] via-[#0f0a07] to-brand-dark px-6 py-16 md:px-16 md:py-24"
     >
+      {/* Background Images */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/baocap-bg.png')] bg-cover bg-center opacity-10 grayscale mix-blend-luminosity" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0_0,#fbbf2415,transparent_50%),radial-gradient(circle_at_100%_100%,#facc1508,transparent_55%)] mix-blend-screen" />
 

@@ -7,6 +7,8 @@ export function DoiMoiSection() {
       id="doi-moi"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#081812] to-[#041c14] px-6 py-16 md:px-16 md:py-24"
     >
+      {/* Background Images */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/doimoi-bg.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_0,#10b98122,transparent_55%),radial-gradient(circle_at_90%_100%,#38bdf815,transparent_55%)] mix-blend-screen" />
 

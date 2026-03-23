@@ -6,6 +6,8 @@ export function TheorySection() {
       id="ly-thuyet"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#111] to-black px-6 py-16 md:px-16 md:py-24"
     >
+      {/* Background Image */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/hero-bg.png')] bg-cover bg-center opacity-10 grayscale mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#facc1515,transparent_50%),radial-gradient(circle_at_90%_100%,#38bdf812,transparent_60%)] mix-blend-screen" />
 

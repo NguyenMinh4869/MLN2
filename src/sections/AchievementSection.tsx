@@ -7,6 +7,8 @@ export function AchievementSection() {
       id="thanh-tuu"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-[#011b33] via-[#022424] to-brand-dark px-6 py-16 md:px-16 md:py-24"
     >
+      {/* Background Image */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/thitruong-bg.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0_0,#10b98122,transparent_60%),radial-gradient(circle_at_100%_100%,#38bdf81a,transparent_65%)] mix-blend-screen" />
 

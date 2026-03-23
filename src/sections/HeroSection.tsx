@@ -10,6 +10,9 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
       id="hero"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-[#0c0d12] via-[#050505] to-[#0a0a0c] px-6 py-16 md:px-16 md:py-24 lg:flex lg:items-center lg:gap-16"
     >
+      {/* Background Images */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/hero-bg.png')] bg-cover bg-center opacity-20 mix-blend-overlay" />
+      
       {/* Premium Background Effects */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3">
         <div className="h-[500px] w-[500px] rounded-full bg-brand-gold/10 blur-[120px]" />
