@@ -12,7 +12,7 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
     >
       {/* Background Images */}
       <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/hero-bg.png')] bg-cover bg-center opacity-20 mix-blend-overlay" />
-      
+
       {/* Premium Background Effects */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3">
         <div className="h-[500px] w-[500px] rounded-full bg-brand-gold/10 blur-[120px]" />
@@ -20,7 +20,7 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
       <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3">
         <div className="h-[400px] w-[400px] rounded-full bg-brand-blue/10 blur-[100px]" />
       </div>
-      
+
       {/* Noise overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
 
@@ -35,11 +35,11 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-gold opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-gold shadow-glow-gold"></span>
             </span>
-            Chuyên đề MLN122 · Scroll Storytelling
+            Sản phẩm sáng tạo MLN122 - Nhóm 3
           </p>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           className="font-display text-balance text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl lg:leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
           </span>
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           className="max-w-xl text-pretty text-base leading-relaxed text-slate-300 md:text-lg"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
           Hành trình khám phá sự chuyển đổi vĩ đại của nền kinh tế Việt Nam từ cơ chế kế hoạch hóa bao cấp đến nền kinh tế thị trường hội nhập toàn cầu.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex flex-wrap items-center gap-6 pt-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -88,18 +88,18 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
 
       <div className="relative z-10 mt-16 w-full lg:w-[45%] lg:mt-0 flex flex-col justify-center items-center lg:items-end">
         <motion.div
-           initial={{ opacity: 0, y: 40, rotateX: -15, rotateY: 15 }}
-           animate={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0 }}
-           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-           style={{ transformPerspective: 1000 }}
-           className="glass-card relative w-full max-w-[26rem] overflow-hidden rounded-[2.5rem] p-[1px] shadow-2xl"
+          initial={{ opacity: 0, y: 40, rotateX: -15, rotateY: 15 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+          style={{ transformPerspective: 1000 }}
+          className="glass-card relative w-full max-w-[26rem] overflow-hidden rounded-[2.5rem] p-[1px] shadow-2xl"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/0 rounded-[2.5rem]" />
           <div className="relative w-full rounded-[2.45rem] bg-brand-dark/90 px-8 py-10 flex flex-col gap-8 overflow-hidden backdrop-blur-2xl">
             {/* Ambient inner glow */}
             <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-gold/15 blur-[60px]" />
             <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-brand-blue/15 blur-[60px]" />
-            
+
             <div className="relative z-10">
               <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-gold">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-gold animate-pulse" />
@@ -114,7 +114,7 @@ export function HeroSection({ onStartJourney }: HeroSectionProps) {
                 <h4 className="font-display text-[15px] font-bold tracking-tight text-white mb-1 drop-shadow-md">Trước 1986</h4>
                 <p className="text-sm leading-relaxed text-slate-400">Nền kinh tế bao cấp, phân phối bằng hiện vật và tem phiếu.</p>
               </div>
-              
+
               <div className="relative pl-6">
                 <div className="absolute -left-[5px] top-1.5 h-[8px] w-[8px] rounded-full bg-brand-gold shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
                 <h4 className="font-display text-[15px] font-bold tracking-tight text-brand-gold mb-1 drop-shadow-md">Đại hội VI (1986)</h4>

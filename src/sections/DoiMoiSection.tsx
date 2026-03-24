@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { RevealOnScroll } from '../animations/useRevealOnScroll'
+import { Sun, Sprout } from 'lucide-react'
 
 export function DoiMoiSection() {
   return (
@@ -8,9 +9,25 @@ export function DoiMoiSection() {
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#081812] to-[#041c14] px-6 py-16 md:px-16 md:py-24"
     >
       {/* Background Images */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/doimoi-bg.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_0,#10b98122,transparent_55%),radial-gradient(circle_at_90%_100%,#38bdf815,transparent_55%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/doimoi-bg.png')] bg-cover bg-center opacity-90 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-25 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_0,#10b98135,transparent_60%),radial-gradient(circle_at_90%_100%,#38bdf820,transparent_60%)] mix-blend-screen" />
+
+      {/* Animated Icons */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+        className="pointer-events-none absolute top-16 right-[-20px] text-[#10b981]/10"
+      >
+        <Sun size={220} strokeWidth={1} />
+      </motion.div>
+      <motion.div
+        animate={{ y: [0, -15, 0], rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute bottom-16 left-12 text-[#38bdf8]/10"
+      >
+        <Sprout size={140} strokeWidth={1} />
+      </motion.div>
 
       <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#10b981]">

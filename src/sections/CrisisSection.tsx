@@ -10,7 +10,8 @@ import {
 } from 'chart.js'
 import { crisisRules } from '../data/storyData'
 import { RevealOnScroll } from '../animations/useRevealOnScroll'
-
+import { TrendingDown, AlertTriangle } from 'lucide-react'
+import { motion } from 'framer-motion'
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend)
 
 const labels = ['Sản xuất', 'Phân phối', 'Giá cả']
@@ -79,8 +80,25 @@ export function CrisisSection() {
       id="khung-hoang"
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#1a0f12] to-[#261014] px-6 py-16 md:px-16 md:py-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#e6394622,transparent_50%),radial-gradient(circle_at_90%_100%,#facc1510,transparent_55%)] mix-blend-screen" />
-      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/baocap-bg.png')] bg-cover bg-center opacity-[0.09] grayscale mix-blend-luminosity" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,#e6394635,transparent_60%),radial-gradient(circle_at_90%_100%,#facc1515,transparent_60%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-25 mix-blend-overlay" />
+
+      {/* Animated Icons */}
+      <motion.div
+        animate={{ y: [0, -15, 0], rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute top-32 right-12 text-brand-red/10"
+      >
+        <TrendingDown size={180} strokeWidth={1} />
+      </motion.div>
+      <motion.div
+        animate={{ scale: [1, 1.05, 1], opacity: [0.05, 0.1, 0.05] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute bottom-32 left-12 text-brand-gold"
+      >
+        <AlertTriangle size={150} strokeWidth={1} />
+      </motion.div>
 
       <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-red">

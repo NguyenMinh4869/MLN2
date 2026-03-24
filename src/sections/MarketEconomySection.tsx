@@ -1,4 +1,6 @@
 import { RevealOnScroll } from '../animations/useRevealOnScroll'
+import { LineChart, Globe } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export function MarketEconomySection() {
   return (
@@ -7,9 +9,25 @@ export function MarketEconomySection() {
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-brand-dark via-[#05111b] to-[#011b33] px-6 py-16 md:px-16 md:py-24"
     >
       {/* Background Images */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/thitruong-bg.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-15 mix-blend-overlay" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_5%_0,#38bdf822,transparent_60%),radial-gradient(circle_at_100%_100%,#0ea5e915,transparent_65%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/thitruong-bg.png')] bg-cover bg-center opacity-20 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-25 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_5%_0,#38bdf835,transparent_60%),radial-gradient(circle_at_100%_100%,#0ea5e920,transparent_65%)] mix-blend-screen" />
+
+      {/* Animated Icons */}
+      <motion.div
+        animate={{ y: [0, 25, 0], rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute top-24 left-10 text-brand-blue/10"
+      >
+        <Globe size={200} strokeWidth={1} />
+      </motion.div>
+      <motion.div
+        animate={{ y: [0, -20, 0], scale: [1, 1.05, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute bottom-24 right-12 text-[#38bdf8]/10"
+      >
+        <LineChart size={180} strokeWidth={1} />
+      </motion.div>
 
       <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-blue">

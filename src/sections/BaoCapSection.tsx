@@ -1,4 +1,6 @@
 import { RevealOnScroll } from '../animations/useRevealOnScroll'
+import { Ticket, Building } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export function BaoCapSection() {
   return (
@@ -7,9 +9,25 @@ export function BaoCapSection() {
       className="section-shadow relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-[#1a1410] via-[#0f0a07] to-brand-dark px-6 py-16 md:px-16 md:py-24"
     >
       {/* Background Images */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/baocap-bg.png')] bg-cover bg-center opacity-10 grayscale mix-blend-luminosity" />
-      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0_0,#fbbf2415,transparent_50%),radial-gradient(circle_at_100%_100%,#facc1508,transparent_55%)] mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/images/baocap-bg.png')] bg-cover bg-center opacity-20 grayscale mix-blend-luminosity" />
+      <div className="pointer-events-none absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0_0,#fbbf2430,transparent_55%),radial-gradient(circle_at_100%_100%,#facc1515,transparent_60%)] mix-blend-screen" />
+
+      {/* Animated Icons */}
+      <motion.div
+        animate={{ y: [0, -20, 0], rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute top-20 right-20 text-[#fde68a]/10"
+      >
+        <Ticket size={160} strokeWidth={1} />
+      </motion.div>
+      <motion.div
+        animate={{ y: [0, 20, 0], rotate: [0, -10, 10, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        className="pointer-events-none absolute bottom-20 left-10 text-[#fde68a]/5"
+      >
+        <Building size={200} strokeWidth={1} />
+      </motion.div>
 
       <RevealOnScroll className="relative z-10 max-w-3xl space-y-6">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#b28a5a]">
