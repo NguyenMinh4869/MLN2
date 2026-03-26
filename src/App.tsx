@@ -9,6 +9,8 @@ import { AchievementSection } from './sections/AchievementSection'
 import { ConclusionSection } from './sections/ConclusionSection'
 import { TheorySection } from './sections/TheorySection'
 import { GallerySection } from './sections/GallerySection'
+import { AuthorsSection } from './sections/AuthorsSection'
+import { ChatBox } from './components/ChatBox'
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
       <TheorySection />
       <GallerySection />
       <ConclusionSection />
+      <AuthorsSection />
+      <ChatBox />
     </Layout>
   )
 }
