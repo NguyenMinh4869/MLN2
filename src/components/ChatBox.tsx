@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react'
 
-const HF_TOKEN = "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" // Replace with your Hugging Face API Token (Settings > Access Tokens)
-const MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct:fastest"
+const HF_TOKEN = import.meta.env.VITE_HF_TOKEN
+const MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 
 interface Message {
   role: 'user' | 'bot'
@@ -17,6 +17,7 @@ export function ChatBox() {
     { role: 'bot', text: 'Chào bạn! Tôi là trợ lý AI Qwen 2.5 kiến thức về Kinh tế thị trường định hướng XHCN. Bạn muốn tìm hiểu gì hôm nay?' }
   ])
   const [isLoading, setIsLoading] = useState(false)
+  const [errorContext, setErrorContext] = useState<string | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -34,6 +35,7 @@ export function ChatBox() {
     setIsLoading(true)
 
     try {
+      setErrorContext(null);
       // Hugging Face Inference API (using the OpenAI-compatible endpoint)
       const response = await fetch(
         "https://router.huggingface.co/v1/chat/completions",
@@ -75,6 +77,7 @@ Hãy xưng hô "Tôi" và gọi người dùng là "Bạn" hoặc "Bạn trẻ".
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
+        setErrorContext(`HF Status: ${response.status} - ${errorData.error || 'Unknown Error'}`);
         throw new Error(errorData.error || `HF Error: ${response.status}`);
       }
 
@@ -82,9 +85,12 @@ Hãy xưng hô "Tôi" và gọi người dùng là "Bạn" hoặc "Bạn trẻ".
       const botResponse = result.choices[0].message.content
 
       setMessages(prev => [...prev, { role: 'bot', text: botResponse }])
-    } catch (error) {
+    } catch (error: any) {
       console.error("AI Assistant Error:", error)
-      setMessages(prev => [...prev, { role: 'bot', text: 'Xin lỗi, tôi đang gặp chút sự cố kết nối với hệ thống Qwen. Bạn thử lại sau nhé!' }])
+      const finalErrMsg = errorContext
+        ? `Lỗi kết nối (${errorContext}). Bạn vui lòng kiểm tra HF_TOKEN và gói dịch vụ trên Hugging Face.`
+        : 'Sự cố kết nối hệ thống. Bạn hãy thử lại sau vài giây nhé!';
+      setMessages(prev => [...prev, { role: 'bot', text: finalErrMsg }])
     } finally {
       setIsLoading(false)
     }
